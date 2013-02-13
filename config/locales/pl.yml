@@ -26,5 +26,6 @@ pl:
       your_name: Twoje imię
       your_email: Twój e-mail
       optional: opcjonalnie
+      wrote: napisał(a)
     content_may_not_be_blank:
       error: Nic nie napisałeś.

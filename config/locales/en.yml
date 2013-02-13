@@ -26,5 +26,6 @@ en:
       your_name: Your name
       your_email: Your e-mail
       optional: optional
+      wrote: wrote
     content_may_not_be_blank:
       error: You didn't write anything.
