@@ -33,9 +33,9 @@ if (!Juvia) {
 			
 			var addCommentForm = $('.juvia-add-comment-form', this);
 			
-			$('input[name=author_name]', addCommentForm).example('Your name (optional)',
+      $('input[name=author_name]', addCommentForm).example('<%= t('.your_name') %> (<%= t('.optional') %>)',
 				{ className: 'juvia-example-text' });
-			$('input[name=author_email]', addCommentForm).example('Your email (optional)',
+			$('input[name=author_email]', addCommentForm).example('<%= t('.your_email') %> (<%= t('.optional') %>)',
 				{ className: 'juvia-example-text' });
 			
 			/* Our submit handler is called before jquery.example has cleared the
@@ -227,6 +227,7 @@ if (!Juvia) {
 			topic_key   : $container.data('topic-key'),
 			topic_title : $container.data('topic-title'),
 			topic_url   : $container.data('topic-url'),
+      locale      : $container.data('locale'),
 			author_name : $('input[name="author_name"]', form).val(),
 			author_email: $('input[name="author_email"]', form).val(),
 			content     : this.compress($('textarea[name="content"]', form).val())

@@ -1,0 +1,30 @@
+pl:
+  time:
+    formats:
+      default: "%d.%m.%Y, %H:%M"
+  date:
+    formats:
+      default: "%d.%m.%Y"
+  api:
+    topic:
+      comment: komentarz
+      comments: komentarzy
+      add_comment: Dodaj komentarz
+      no_comments: Nikt jeszcze nie skomentował. Bądź pierwszy!
+    comment:
+      anonymous: Anonimowy
+      reply: Odpowiedz na ten komentarz
+      under_moderation: Ten komentarz obecnie czeka na moderację i pozostanie niewidoczny dopóki nie zostanie zaakceptowany przez administratora.
+    form:
+      preview: Podgląd
+      submit: Wyślij
+      submitting: Wysyłam, proszę czekaj...
+      email_help: Adres e-mail jest używany jedynie po to, aby wyświetlić Twój %{gravatar}. Nie będzie wyświetlany w komentarzu i inni go nie zobaczą.
+      markdown_help: Komentarze mogą zawierać składnię %{markdown}. Wpisz coś a zobaczysz tutaj podgląd.
+      juvia_ad: Komentarze obsługiwane są przez %{juvia}.
+    base:
+      your_name: Twoje imię
+      your_email: Twój e-mail
+      optional: opcjonalnie
+    content_may_not_be_blank:
+      error: Nic nie napisałeś.

@@ -5,21 +5,21 @@
 				<img src="//www.gravatar.com/avatar/<%= comment.author_email_md5 %>?s=64"
 				width="64"
 				height="64"
-				alt="<%= comment.author_name || 'Anonymous' %>">
+				alt="<%= comment.author_name || t('.anonymous') %>">
 			</div>
 		<% else %>
 			<div class="juvia-avatar">
 				<img src="http://www.gravatar.com/avatar/generic?s=64"
 				width="64"
 				height="64"
-				alt="<%= comment.author_name || 'Anonymous' %>">
+				alt="<%= comment.author_name || t('.anonymous') %>">
 			</div>
 		<% end %>
 		<div class="juvia-author juvia-author-without-email">
-			<%= comment.author_name || 'Anonymous' %>
+			<%= comment.author_name || t('.anonymous') %>
 		</div>
 		<div class="juvia-creation-date">
-			<%= comment.created_at.strftime("%B %d %Y, %H:%M") %>
+			<%= l comment.created_at %>
 		</div>
 		<div class="juvia-end"></div>
 	</div>
@@ -27,13 +27,11 @@
 		<div class="juvia-comment-content">
 			<% if comment.moderation_status != :ok %>
 				<p class="juvia-moderating">
-					This comment is currently under moderation
-					and won't show up until approved by the
-					administrator.
+          <%= t('.under_moderation') %>
 				</p>
 			<% end %>
 			<div class="juvia-comment-pure-content"><%= render_markdown(comment.content) %></div>
-			<p class="juvia-reply-to-comment"><a href="javascript:void(0)">Reply to this comment</a></p>
+      <p class="juvia-reply-to-comment"><a href="javascript:void(0)"><%= t('.reply') %></a></p>
 		</div>
 	</div>
 </div>

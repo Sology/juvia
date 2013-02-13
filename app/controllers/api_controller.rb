@@ -110,6 +110,9 @@ private
     @site_key     = params[:site_key]
     @topic_key    = params[:topic_key]
     @jsonp        = params[:jsonp]
+    @locale       = params[:locale]
+
+    I18n.locale = @locale
   end
 
   def prepare!(required_params, accepted_formats)
